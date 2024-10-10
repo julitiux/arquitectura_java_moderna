@@ -18,6 +18,11 @@ public class MyArchitectureTest {
                 .that().resideInAPackage("..service..")
                 .should().onlyBeAccessed().byAnyPackage("..controller..", "..service..");
 
+        ArchRule rule2 = classes()
+          .that().resideInAPackage("..repository..")
+            .should().onlyBeAccessed().byAnyPackage("..service..");
+
         rule.check(classes);
+        rule2.check(classes);
     }
 }
