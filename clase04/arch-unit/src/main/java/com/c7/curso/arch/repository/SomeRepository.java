@@ -1,14 +1,9 @@
 package com.c7.curso.arch.repository;
 
-import com.c7.curso.arch.service.SomeService;
+public interface SomeRepository {
 
-public class SomeRepository {
-
-  private SomeService someService;
-
-  public void sayNo() {
-    someService.sayHi();
-  }
-
+  void save();
+  void update();
+  void delete();
 
 }
