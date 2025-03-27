@@ -1,42 +1,38 @@
-.idea/
-.mvn/
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-target
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-clase04/arch-unit/.idea/
-clase04/arch-unit/.mvn
-clase04/arch-unit/target/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-clase07/ddd-02-layered/.idea/
-clase07/ddd-02-layered/.mvn
-clase07/ddd-02-layered/target/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-clase06/ddd-02-layered/.idea/
-clase06/ddd-02-layered/.mvn
-clase06/ddd-02-layered/target/
+### VS Code ###
+.vscode/
 
-clase08/onion-app/.idea/
-clase08/onion-app/.mvn
-clase08/onion-app/target/
-
-clase09/clean_01/.idea/
-clase09/clean_01/.mvn/
-clase09/clean_01/target/
-
-clase09/clean_02/.idea/
-clase09/clean_02/.mvn/
-clase09/clean_02/target/
-
-clase11/hexagonal/.idea/
-clase11/hexagonal/.mvn/
-clase11/clean_02/target/
-clase11/hexagonal/hexagonal-01/.gradle/
-clase11/hexagonal/hexagonal-02/.gradle/
-clase11/hexagonal/hexagonal-03/.gradle/
-clase11/hexagonal/hexagonal-04/.gradle/
-clase11/hexagonal/hexagonal-05/.gradle/
-clase11/hexagonal/hexagonal-07/.gradle/
-
-clase13/eda-01/.idea/
-clase13/eda-01/.mvn/
-clase13/eda-01/target/
