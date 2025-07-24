@@ -1,0 +1,53 @@
+plugins {
+  id 'java'
+  id 'org.springframework.boot' version '3.2.1'
+  id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.c7.course.arch.ddd'
+version = '0.0.1-SNAPSHOT'
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(21)
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  mapstructVersion = '1.5.5.Final'
+  jmoleculesVersion = '1.9.0'
+  springdocVersion = '2.3.0'
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+  implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
+  runtimeOnly 'com.h2database:h2'
+
+  compileOnly 'org.projectlombok:lombok'
+  annotationProcessor 'org.projectlombok:lombok'
+  annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+
+  implementation "org.jmolecules:jmolecules-ddd:${jmoleculesVersion}"
+  implementation "org.jmolecules:jmolecules-layered-architecture:${jmoleculesVersion}"
+
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  testImplementation 'org.jmolecules.integrations:jmolecules-archunit:1.6.0'
+  // testImplementation 'com.tngtech.archunit:archunit-junit5:1.3.0' // comentado como en el pom
+}
+
+tasks.withType(Test).configureEach {
+  useJUnitPlatform()
+}
+
+bootJar {
+  exclude {
+    it.file.name.contains("lombok")
+  }
+}
