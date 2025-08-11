@@ -1,2 +1,2 @@
 rootProject.name = 'arquitectura_java_moderna'
-include 'clase04:arch-unit', 'clase05:agregados', 'clase07:ddd-01', 'clase07:ddd-02-layered'
+include 'clase04:arch-unit', 'clase05:agregados', 'clase07:ddd-01', 'clase07:ddd-02-layered', 'clase08:onion-app'
