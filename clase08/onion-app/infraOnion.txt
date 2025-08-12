@@ -1,0 +1,16 @@
+src/main/java/
+└── com
+    └── c7
+        └── curso
+            └── arch
+                └── onion
+                    └── onionapp
+                        ├── application
+                        │   └── service
+                        ├── domain
+                        │   ├── entity
+                        │   ├── repository
+                        │   └── service
+                        └── infrastructure
+                            ├── persistence
+                            └── web
